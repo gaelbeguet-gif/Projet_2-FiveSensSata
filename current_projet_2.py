@@ -29,6 +29,16 @@ def page_recommandation():
 
 def page_bande_annonce():
     st.title("Bandes-annonces 🎥")
+    with st.bar:
+        selected = option_menu(
+            menu_title="Entrer le titre du film dont vous voulez voir le trailer",        # Titre du menu (None pour cacher)
+            options=["Accueil", "Upload", "Tâches"], # Les onglets
+            icons=["house", "cloud-upload", "list-task"], # Icônes Bootstrap
+            menu_icon="cast",                   # Icône du titre du menu
+            default_index=0,                    # Quel onglet est ouvert par défaut
+            orientation="horizontal",             # "vertical" ou "horizontal"
+            # styles={...}                      # Dictionnaire CSS pour personnaliser les couleurs
+        )
     st.write("Vidéos YouTube ici.")
 
 def page_genre():
