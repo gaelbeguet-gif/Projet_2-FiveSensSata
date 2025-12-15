@@ -1,0 +1,102 @@
+/* style.css */
+
+/* 1. FOND DE SCENE (RIDEAUX) */
+.stApp {
+    background-color: #1a1a1a;
+    background-image: linear-gradient(
+        90deg, 
+        #4b0082 0%, #800080 10%, /* Rideau Gauche */
+        #000000 20%, #000000 80%, /* Scène centrale noire */
+        #800080 90%, #4b0082 100% /* Rideau Droit */
+    );
+    color: white;
+}
+
+/* 2. FORCER LES TEXTES EN BLANC/CLAIR */
+h1, h2, h3, h4, h5, h6, p, span, div {
+    color: #e0e0e0;
+}
+
+/* 2. LE PANNEAU ROSE (TITRE) */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+.pink-title-box {
+    background-color: #dda0dd; /* Couleur prune/rose */
+    border-radius: 20px;
+    padding: 15px 40px;
+    box-shadow: 0px 0px 20px rgba(221, 160, 221, 0.6);
+    text-align: center;
+    color: #2c003e !important; /* Force la couleur foncée sur le rose */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 3. STYLISATION DES WIDGETS */
+.stTextInput input {
+    color: white !important;
+    background-color: #333 !important;
+}
+.stTextInput > div > div > input {
+    text-align: center;
+    background-color: #2c003e;
+    color: white;
+    border: 1px solid #dda0dd;
+}
+.stSelectbox > div > div {
+    background-color: #2c003e;
+    color: white;
+}
+/* Boutons personnalisés */
+.stButton > button {
+    background-color: #dda0dd;
+    color: #2c003e !important;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 100%;
+    border: none;
+}
+.stButton > button:hover {
+    background-color: #fff;
+    color: purple; /* Correction de la syntaxe '#purple' qui était invalide */
+}
+
+/* 4. CADRES DES AFFICHES ET DETAILS */
+img {
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px rgba(255, 215, 0, 0.6);
+}
+
+/* Boite de détails du film sélectionné */
+.movie-details-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #dda0dd;
+    margin-top: 20px;
+}
+
+/* 5. LES SIEGES (FOOTER) */
+.seats-footer {
+    position: fixed; left: 0; bottom: 0; width: 100%; height: 60px; z-index: 100;
+    background-image: radial-gradient(circle at 50% 60%, #5e2a84 30px, transparent 31px);
+    background-size: 70px 80px; background-repeat: repeat-x; pointer-events: none;
+}
+
+/* Masquer menu */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
